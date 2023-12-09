@@ -1,13 +1,11 @@
 package com.arka99.restaurant.main;
 
-import org.apache.catalina.LifecycleException;
 import org.apache.catalina.WebResourceRoot;
 import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 
-import javax.servlet.ServletException;
 import java.io.File;
 
 public class Main {
@@ -26,10 +24,8 @@ public class Main {
 
             tomcat.start();
             tomcat.getServer().await();
-        } catch (ServletException e) {
+        } catch (Exception e) {
             System.out.println("An exception occurred: " + e.getMessage());
-        } catch (LifecycleException e) {
-            throw new RuntimeException(e);
         }
     }
 }

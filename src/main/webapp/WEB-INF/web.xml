@@ -7,4 +7,12 @@
     <description>
         The menu and online ordering system for Arka's restaurant.
     </description>
+    <servlet>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>com.arka99.restaurant.servlets.HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/hello.html</url-pattern>
+    </servlet-mapping>
 </web-app>
